@@ -231,6 +231,7 @@
 
         public static IServiceCollection AddCustomDbContext(this IServiceCollection services, IConfiguration configuration)
         {
+            Console.Out.WriteLine("Hello from minh, config for ConnectionString:" + configuration["ConnectionString"]);
             services.AddEntityFrameworkSqlServer()
                    .AddDbContext<OrderingContext>(options =>
                    {

@@ -1,0 +1,8 @@
+use [Microsoft.eShopOnContainers.Service.IdentityDb];
+go;
+SELECT * FROM INFORMATION_SCHEMA.TABLES;
+go;
+select * from ClientRedirectUris;
+go;
+sp_databases;
+go;

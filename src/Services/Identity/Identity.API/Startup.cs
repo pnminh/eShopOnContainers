@@ -37,7 +37,7 @@ namespace Microsoft.eShopOnContainers.Services.Identity.API
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             RegisterAppInsights(services);
-
+            Console.Out.WriteLine("Hello from minh, config for ConnectionString:" + Configuration["ConnectionString"]);
             // Add framework services.
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionString"],

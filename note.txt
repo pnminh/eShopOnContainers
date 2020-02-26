@@ -1,0 +1,9 @@
+docker exec -it  src_sqldata_1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pass@word
+#docker compose
+#need to build images first
+docker-compose -f docker-compose.yml -f docker-compose.override.yml build
+#docker-compose up: run containers from images
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up
+#docker-compose down -v:delete everything (containers, volumes,etc) but not images 
+docker-compose down -v
+#note that the first start(docker-compose up) may have the db not ready yet, so we may need to run the 2nd time 
